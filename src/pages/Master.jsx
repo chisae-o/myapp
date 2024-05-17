@@ -1,11 +1,12 @@
 import { memo } from "react";
 import { Text, View } from "react-native";
 import { MyTabs } from "../layouts/MyTabs";
+import { Today } from "./Today";
 
-export const Today = memo(() => {
+export const Master = memo(() => {
   return (
     <View style={{ flex: 1 }}>
-      <Text>今日のタスク</Text>
+      <MyTabs />
     </View>
   );
 });

@@ -10,22 +10,9 @@ const Tab = createMaterialBottomTabNavigator();
 
 export const MyTabs = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator initialRouteName="Today">
       <Tab.Screen
-        name="タスク一覧"
-        component={RepeatedTaskList}
-        options={{
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons
-              name="card-bulleted-settings"
-              color={color}
-              size={26}
-            />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="今日"
+        name="Today"
         component={Today}
         options={{
           tabBarIcon: ({ color }) => (
@@ -50,6 +37,21 @@ export const MyTabs = () => {
           ),
         }}
       />
+
+      <Tab.Screen
+        name="タスク一覧"
+        component={RepeatedTaskList}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons
+              name="card-bulleted-settings"
+              color={color}
+              size={26}
+            />
+          ),
+        }}
+      />
+
       <Tab.Screen
         name="記録"
         component={Logs}
