@@ -7,19 +7,20 @@ import {
 } from "react-native";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../Firebase";
-
-const handleRegister = async () => {
-  try {
-    const user = await createUserWithEmailAndPassword(auth, email, password);
-    console.log(user);
-  } catch (error) {
-    console.log(error.message);
-  }
-};
+import { useState } from "react";
 
 const RegisterScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const handleRegister = async () => {
+    try {
+      const user = await createUserWithEmailAndPassword(auth, email, password);
+      console.log(user);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
   return (
     <KeyboardAvoidingView

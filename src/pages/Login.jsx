@@ -10,7 +10,11 @@ export const Login = memo(({ navigation }) => {
   return (
     <View style={{ flex: 1 }}>
       <Text>Login画面</Text>
-      <Button title="master" onPress={() => navigation.navigate("Master")} />
+      <Button title="Login" onPress={() => navigation.navigate("Master")} />
+      <Button
+        title="Register"
+        onPress={() => navigation.navigate("Register")}
+      />
     </View>
   );
 });
