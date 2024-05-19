@@ -31,6 +31,16 @@ const RegisterScreen = () => {
         flex: 1,
       }}
     >
+      <TouchableOpacity
+        style={{
+          padding: 10,
+          backgroundColor: "#88cb7f",
+          borderRadius: 10,
+        }}
+        onPress={() => navigation.navigate("Login")}
+      >
+        <Text style={{ color: "white" }}>ログイン画面に戻る</Text>
+      </TouchableOpacity>
       <Text style={{ fontSize: 20, marginBottom: 20 }}>ユーザ登録画面</Text>
       <View style={{ marginBottom: 20 }}>
         <TextInput
